@@ -11,8 +11,8 @@ function HeaderSection() {
         <p className="mt-2">
           In the realm of social media and content sharing platforms, user
           feedback is paramount. Platforms often provide mechanisms for users to
-          express their opinions on content, commonly through "like" and
-          "dislike" buttons. Implementing an efficient and responsive system for
+          express their opinions on content, commonly through &ldquo;like&rdquo; and
+          &ldquo;dislike&rdquo; buttons. Implementing an efficient and responsive system for
           this is crucial to ensure a seamless user experience.
         </p>
 
@@ -31,7 +31,7 @@ function HeaderSection() {
             <span className="font-bold">Dynamic Counter:</span> Each button is
             associated with a counter that updates in real-time as users click
             on the buttons. This provides immediate feedback to other users
-            about the content's reception.
+            about the content&apos;s reception.
           </li>
           <li className="mt-2">
             <span className="font-bold">Custom Hooks:</span> The

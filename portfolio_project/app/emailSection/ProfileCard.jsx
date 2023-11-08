@@ -29,7 +29,7 @@ const ProfileCard = () => {
           <p className="text-[#ADB7BE] mb-6 max-w-md py-2">
             I am available for freelance or full-time positions.
             <br />
-            Contact me and let's talk.
+            Contact me and let&apos;s talk.
           </p>
         </div>
         <div>

@@ -48,4 +48,5 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
   );
 });
 
+ProjectImage.displayName = 'ProjectImage';
 export default ProjectImage;

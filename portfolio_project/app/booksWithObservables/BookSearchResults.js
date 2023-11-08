@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 import Pagination from "../utils/PaginationsBooks";
 
 function BookSearchResults({
@@ -34,9 +36,12 @@ function BookSearchResults({
                   <div key={book.id} className="w-1/4 p-2 mb-4 book-card">
                     <div className="book-thumbnail flex justify-center items-center h-48">
                       {book.volumeInfo.imageLinks && (
-                        <img
+                        <Image
                           src={book.volumeInfo.imageLinks.thumbnail}
                           alt={book.volumeInfo.title}
+                          width={500} // These should be the actual dimensions of your images
+                          height={300} // or the dimensions you want them to display at
+                          layout="responsive"
                           className="max-h-full"
                         />
                       )}

@@ -25,10 +25,6 @@ export default function RootLayout({ children }) {
         <meta name="color-scheme" content="light dark" />
         <title>Portfolio Project by Milan Carevic</title>
         <link rel="manifest" href="/manifest.json" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body suppressHydrationWarning>
         <Navbar />

@@ -23,4 +23,6 @@ const SkillCard = React.memo(({ src, label, priority }) => (
   </div>
 ));
 
+SkillCard.displayName = 'SkillCard';
+
 export default SkillCard;
