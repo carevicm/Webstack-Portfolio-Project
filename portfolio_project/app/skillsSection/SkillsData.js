@@ -12,7 +12,7 @@ const skills = [
   { src: "/images/skills/mongodb.webp", label: "MongoDB" },
   { src: "/images/skills/api.webp", label: "API" },
   { src: "/images/skills/json.webp", label: "JSON" },
-  { src: "/images/skills/jquery.webp", label: "jQuery" },
+  { src: "/images/skills/jQuery.webp", label: "jQuery" },
   { src: "/images/skills/python.webp", label: "Python" },
   { src: "/images/skills/webpack.webp", label: "Webpack" },
 ];
