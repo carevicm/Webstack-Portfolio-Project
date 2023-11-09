@@ -8,15 +8,21 @@ function ClientSideComponent({ project }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
   const router = useRouter();
 
-  const handleBackNavigation = () => {
-    const sectionPath = "/#projects";
-    router.push(sectionPath);
-    setTimeout(() => {
-      const targetElement = document.querySelector("#projects");
+  const handleBackClick = (e) => {
+    const backLink = "/#projects";
+    const isHashLink = backLink.startsWith("#");
+
+    if (isHashLink) {
+      e.preventDefault();
+      // Handle the hash link click logic here
+      // For example, scroll to the specific section
+      const targetElement = document.querySelector(backLink);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
+        targetElement.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 100);
+    } else {
+      router.push(backLink);
+    }
   };
 
   useEffect(() => {
@@ -48,6 +54,7 @@ function ClientSideComponent({ project }) {
             width={400}
             height={200}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+           
             priority={true}
             className="transition-opacity duration-700 ease-in-out"
             style={imageStyle}
@@ -108,12 +115,12 @@ function ClientSideComponent({ project }) {
               </a>
             )}
           </div>
-          <span
-            onClick={handleBackNavigation}
-            className="mt-6 p-2 text-[#93c5fd] hover:text-[#6ca2e0] cursor-pointer"
-          >
-            Go Back
-          </span>
+          <a
+        onClick={handleBackClick}
+        className="mt-6 p-2 text-[#93c5fd] hover:text-[#6ca2e0] cursor-pointer"
+      >
+        Go Back
+      </a>
         </div>
         <div className="flex-none w-full md:w-auto max-w-1/2 sm:max-w-full pl-10">
           <div className="flex flex-col bg-gradient-to-r text-black from-[#a1a1aa] to-[#93c5fd] shadow-lg shadow-[#d1d5db] rounded-3xl hover:scale-105 ease-in duration-300">
