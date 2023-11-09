@@ -8,19 +8,15 @@ function ClientSideComponent({ project }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
   const router = useRouter();
 
-  const handleBackNavigation = (e) => {
-    e.preventDefault();
-    const hash = "/#projects";
-    if (hash && hash.startsWith("#")) {
-      router.replace(hash).then(() => {
-        const targetElement = document.querySelector(hash);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    } else {
-      router.replace(hash);
-    }
+  const handleBackNavigation = () => {
+    const sectionPath = "/#projects";
+    router.push(sectionPath);
+    setTimeout(() => {
+      const targetElement = document.querySelector("#projects");
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   useEffect(() => {
