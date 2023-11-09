@@ -31,5 +31,5 @@ const ProjectLinks = React.memo(({ gitUrl, previewUrl }) => {
   );
 });
 
-ProjectLinks.displayName = 'ProjectLinks';
+ProjectLinks.displayName = "ProjectLinks";
 export default ProjectLinks;

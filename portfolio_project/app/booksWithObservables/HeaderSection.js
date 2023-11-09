@@ -11,11 +11,11 @@ function HeaderSection() {
           Problem Statement:
         </h2>
         <p className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2">
-          When users search for books, we don&apos;t want to send a request to the
-          server immediately after each keystroke. This can lead to unnecessary
-          server load and a suboptimal user experience. Instead, we want to
-          delay the request slightly to ensure the user has finished typing
-          their query. This is where Observables come into play.
+          When users search for books, we don&apos;t want to send a request to
+          the server immediately after each keystroke. This can lead to
+          unnecessary server load and a suboptimal user experience. Instead, we
+          want to delay the request slightly to ensure the user has finished
+          typing their query. This is where Observables come into play.
         </p>
         <h2 className="text-lg md:text-md lg:text-2xl mt-4 font-semibold">
           Solution:
@@ -29,8 +29,8 @@ function HeaderSection() {
             <strong>debounceTime:</strong> This operator emits the latest value
             and helps in delaying the values transmitted by the root Observable
             for the specified time. This means if the user is typing a word, it
-            won&apos;t send a request until a certain time has passed since the last
-            keystroke.
+            won&apos;t send a request until a certain time has passed since the
+            last keystroke.
           </li>
           <li className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2">
             <strong>distinctUntilChanged:</strong> This operator ensures that

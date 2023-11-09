@@ -4,10 +4,12 @@ import dynamic from "next/dynamic";
 
 const DynamicProfileCard = dynamic(() => import("./ProfileCard"), {
   ssr: false,
+  loading: () => <div style={{ minHeight: "500px" }}></div>,
 });
 
 const DynamicEmailForm = dynamic(() => import("./EmailForm"), {
   ssr: false,
+  loading: () => <div style={{ minHeight: "500px" }}></div>,
 });
 
 const EmailSection = () => {
@@ -25,9 +27,6 @@ const EmailSection = () => {
         </div>
         <div className="z-10">
           <DynamicEmailForm setEmailSuccess={setEmailSuccess} />
-          {emailSuccess && (
-            <p className="text-white text-center mt-4">Message Sent!</p>
-          )}
         </div>
       </section>
     </div>

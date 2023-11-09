@@ -20,6 +20,6 @@ const TabButton = memo(({ active, selectTab, children }) => {
   );
 });
 
-TabButton.displayName = 'TabButton';
+TabButton.displayName = "TabButton";
 
 export default TabButton;

@@ -13,11 +13,11 @@ function HeaderSection({ sampleText }) {
           </h4>
           <p className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2">
             In modern web applications, handling asynchronous operations
-            efficiently is crucial. Whether it&apos;s fetching data from an API or
-            waiting for a certain operation to complete, promises in JavaScript
-            provide a way to handle these asynchronous operations. However,
-            using them effectively requires understanding their behavior and
-            potential pitfalls.
+            efficiently is crucial. Whether it&apos;s fetching data from an API
+            or waiting for a certain operation to complete, promises in
+            JavaScript provide a way to handle these asynchronous operations.
+            However, using them effectively requires understanding their
+            behavior and potential pitfalls.
           </p>
 
           <h4 className="text-lg md:text-md lg:text-2xl  font-semibold mt-4">
@@ -29,13 +29,18 @@ function HeaderSection({ sampleText }) {
           </p>
           <ul className="list-disc pl-5 mt-2">
             <li className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2">
-              <span>Promise Example:</span> A simple promise that resolves after a 2-second delay, simulating an
-              promise that resolves after a 2-second delay, simulating an
-              asynchronous operation. This is showcased below where the resolved
-              value of the promise is displayed.
+              <span>Promise Example:</span> A simple promise that resolves after
+              a 2-second delay, simulating an promise that resolves after a
+              2-second delay, simulating an asynchronous operation. This is
+              showcased below where the resolved value of the promise is
+              displayed.
             </li>
             <li className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2">
-              <span className="font-bold">Data Fetching:</span> The code also demonstrates the use of the useEffect hook to fetch data from an API. Once the data is fetched, it&apos;s displayed in a paginated table. This ensures efficient data handling and a smooth user experience.
+              <span className="font-bold">Data Fetching:</span> The code also
+              demonstrates the use of the useEffect hook to fetch data from an
+              API. Once the data is fetched, it&apos;s displayed in a paginated
+              table. This ensures efficient data handling and a smooth user
+              experience.
             </li>
             <li className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2">
               <span className="font-bold">Window Resize Listener:</span> The

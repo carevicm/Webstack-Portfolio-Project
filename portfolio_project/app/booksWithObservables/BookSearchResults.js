@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
-
 import Pagination from "../utils/PaginationsBooks";
+import Image from "next/image";
 
 function BookSearchResults({
   displayedBooks,
@@ -14,6 +13,12 @@ function BookSearchResults({
   handleReadMore,
   truncateText,
 }) {
+  const imageStyle = {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+    objectPosition: "center",
+  };
   return (
     <section className="book-search-results w-full">
       <div className="mt-4 w-full">
@@ -39,10 +44,13 @@ function BookSearchResults({
                         <Image
                           src={book.volumeInfo.imageLinks.thumbnail}
                           alt={book.volumeInfo.title}
-                          width={500} // These should be the actual dimensions of your images
-                          height={300} // or the dimensions you want them to display at
-                          layout="responsive"
-                          className="max-h-full"
+                          width={100}
+                          height={100}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          quality={70}
+                          priority={true}
+                          className="transition-opacity duration-700 ease-in-out"
+                          style={imageStyle}
                         />
                       )}
                     </div>

@@ -64,7 +64,7 @@ const EmailForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#f3f4f6] text-sm rounded-lg block w-full p-2.5"
-            placeholder="youremail@google.com"
+            placeholder="your.email@here.com"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
@@ -83,7 +83,7 @@ const EmailForm = () => {
             onChange={(e) => setSubject(e.target.value)}
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#f3f4f6] text-sm rounded-lg block w-full p-2.5"
-            placeholder="Just saying hi"
+            placeholder="Your subject line"
           />
         </div>
         <div className="mb-6">

@@ -11,9 +11,10 @@ function HeaderSection() {
         <p className="mt-2">
           In the realm of social media and content sharing platforms, user
           feedback is paramount. Platforms often provide mechanisms for users to
-          express their opinions on content, commonly through &ldquo;like&rdquo; and
-          &ldquo;dislike&rdquo; buttons. Implementing an efficient and responsive system for
-          this is crucial to ensure a seamless user experience.
+          express their opinions on content, commonly through &ldquo;like&rdquo;
+          and &ldquo;dislike&rdquo; buttons. Implementing an efficient and
+          responsive system for this is crucial to ensure a seamless user
+          experience.
         </p>
 
         <h4 className="text-xl font-semibold mt-4">Solution:</h4>

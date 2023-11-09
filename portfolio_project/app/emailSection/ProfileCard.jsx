@@ -4,23 +4,18 @@ import SocialLinks from "./SocialLinks";
 
 const ProfileCard = () => {
   const ContactImg = "/assets/contact-me.webp";
-  const imageSizes = "100vw";
 
   return (
     <div className="flex justify-center items-center lg:justify-start lg:items-start w-full mb-4">
       <div className="lg:p-4 h-full">
-        <div className="rounded-full overflow-hidden relative hover:scale-105 ease-in duration-300">
+        <div className="rounded-full overflow-hidden relative">
           <Image
             src={ContactImg}
             alt="Contact Milan"
             width={260}
-            height={50}
+            height={260}
             className="object-cover object-center rounded-full"
             priority
-            style={{
-              width: "auto",
-              height: "auto",
-            }}
           />
         </div>
         <div className="col-span-3 w-full h-auto lg:p-2">

@@ -2,6 +2,13 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import BookSearchResults from "./BookSearchResults";
 
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => {
+    return <img {...props} src={props.src} />;
+  },
+}));
+
 describe("BookSearchResults", () => {
   const mockBooks = [
     {
@@ -23,8 +30,13 @@ describe("BookSearchResults", () => {
     render(
       <BookSearchResults
         displayedBooks={mockBooks}
+        currentBookPage={1}
+        booksPerPage={10}
+        handleBookPageChange={() => {}}
         items={mockBooks}
         itemsPerPage={10}
+        expandedBookId={null}
+        handleReadMore={() => {}}
         truncateText={mockTruncateText}
       />
     );

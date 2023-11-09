@@ -5,13 +5,11 @@ export function useDynamicImport(ref, importFunction) {
 
   useEffect(() => {
     let observer;
-    const currentRef = ref.current; // Capture the current value of ref.current
-
-    if (currentRef) {
+    if (ref.current) {
       observer = new IntersectionObserver(
         async (entries) => {
           if (entries[0].isIntersecting) {
-            observer.unobserve(currentRef);
+            observer.unobserve(ref.current);
 
             const { default: RealComponent } = await importFunction();
             setComponent(() => RealComponent);
@@ -20,15 +18,15 @@ export function useDynamicImport(ref, importFunction) {
         { threshold: 0.1 }
       );
 
-      observer.observe(currentRef);
+      observer.observe(ref.current);
     }
 
     return () => {
-      if (observer && currentRef) {
-        observer.unobserve(currentRef); // Use the captured value
+      if (observer && ref.current) {
+        observer.unobserve(ref.current);
       }
     };
-  }, [ref, importFunction]); // ref is stable, so it's okay to include it here
+  }, [ref, importFunction]);
 
   return Component;
 }
