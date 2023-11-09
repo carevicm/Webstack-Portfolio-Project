@@ -1,10 +1,18 @@
 import React from "react";
-import Link from "next/link";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
-const NavLink = ({ link, isActive, toggleDropdown, closeMenu, shouldHide }) => {
+const NavLink = ({ link, isActive, toggleDropdown, closeMenu, shouldHide, onHashLinkClick }) => {
   const hasDropdown = Array.isArray(link.links);
   const linkClass = shouldHide ? "hidden" : "block";
+  const isHashLink = link.path && link.path.startsWith("#");
+
+  const handleClick = (e) => {
+    if (isHashLink) {
+      e.preventDefault();
+      onHashLinkClick(link.path);
+    }
+    closeMenu();
+  };
 
   return (
     <li className={`relative group ${linkClass}`}>
@@ -23,27 +31,17 @@ const NavLink = ({ link, isActive, toggleDropdown, closeMenu, shouldHide }) => {
           )}
         </button>
       ) : (
-        <Link href={link.path}>
-          <span
-            onClick={closeMenu}
-            className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded md:p-0 hover:text-white cursor-pointer"
-          >
-            {link.title}
-          </span>
-        </Link>
+        <a href={link.path} onClick={handleClick} className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded md:p-0 hover:text-white cursor-pointer">
+          {link.title}
+        </a>
       )}
       {hasDropdown && isActive && (
         <ul className={`absolute left-0 w-32 bg-[#121212] mt-1`}>
           {link.links.map((subLink, subIndex) => (
             <li key={subLink.id || subIndex} className="w-full">
-              <Link href={subLink.path}>
-                <span
-                  onClick={closeMenu}
-                  className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded hover:text-white cursor-pointer"
-                >
-                  {subLink.title}
-                </span>
-              </Link>
+              <a href={subLink.path} onClick={handleClick} className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded hover:text-white cursor-pointer">
+                {subLink.title}
+              </a>
             </li>
           ))}
         </ul>
