@@ -8,15 +8,23 @@ function ClientSideComponent({ project }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
   const router = useRouter();
 
- const handleBackNavigation = () => {
-  const projectsSection = document.getElementById('projects');
-  if (projectsSection) {
-    projectsSection.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    // Fallback if the section is not found
-    router.push('/#projects');
-  }
-};
+
+  const handleBackNavigation = () => {
+    console.log("Back navigation triggered");
+
+    // Check if the 'projects' section exists on the current page
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      console.log("Scrolling to projects section");
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log("Navigating to /#projects");
+
+      // Directly set the hash to navigate
+      window.location.href = '/#projects';
+    }
+  };
+  
   
 
   useEffect(() => {
