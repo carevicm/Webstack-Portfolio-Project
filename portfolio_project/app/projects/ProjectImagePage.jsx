@@ -22,8 +22,8 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
         <Image
           src={imgUrl}
           alt={title}
-          width={400}
-          height={200}
+          width={500}
+          height={250}
           priority={true}
           className="transition-opacity duration-700 ease-in-out"
           style={imageStyle}

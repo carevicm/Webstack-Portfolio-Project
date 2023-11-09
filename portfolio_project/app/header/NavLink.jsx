@@ -1,7 +1,14 @@
 import React from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
-const NavLink = ({ link, isActive, toggleDropdown, closeMenu, shouldHide, onHashLinkClick }) => {
+const NavLink = ({
+  link,
+  isActive,
+  toggleDropdown,
+  closeMenu,
+  shouldHide,
+  onHashLinkClick,
+}) => {
   const hasDropdown = Array.isArray(link.links);
   const linkClass = shouldHide ? "hidden" : "block";
   const isHashLink = link.path && link.path.startsWith("#");
@@ -31,7 +38,11 @@ const NavLink = ({ link, isActive, toggleDropdown, closeMenu, shouldHide, onHash
           )}
         </button>
       ) : (
-        <a href={link.path} onClick={handleClick} className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded md:p-0 hover:text-white cursor-pointer">
+        <a
+          href={link.path}
+          onClick={handleClick}
+          className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded md:p-0 hover:text-white cursor-pointer"
+        >
           {link.title}
         </a>
       )}
@@ -39,7 +50,11 @@ const NavLink = ({ link, isActive, toggleDropdown, closeMenu, shouldHide, onHash
         <ul className={`absolute left-0 w-32 bg-[#121212] mt-1`}>
           {link.links.map((subLink, subIndex) => (
             <li key={subLink.id || subIndex} className="w-full">
-              <a href={subLink.path} onClick={handleClick} className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded hover:text-white cursor-pointer">
+              <a
+                href={subLink.path}
+                onClick={handleClick}
+                className="block py-2 pl-3 pr-4 text-[#93c5fd] sm:text-xl rounded hover:text-white cursor-pointer"
+              >
                 {subLink.title}
               </a>
             </li>

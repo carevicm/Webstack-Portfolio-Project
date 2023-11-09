@@ -16,7 +16,7 @@ const AboutSection = () => {
 
   return (
     <section className="text-white mb-10" id="about">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-2 px-2 xl:gap-12 sm:py-12 xl:px-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-2 px-2 xl:gap-12 sm:py-8 xl:px-8">
         <div className="min-w-[320px] min-h-[320px]">
           <DynamicProfileImage />
         </div>

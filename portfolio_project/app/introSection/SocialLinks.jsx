@@ -27,7 +27,7 @@ const SocialLinks = () => {
 
   return (
     <div
-      className={`flex flex-col sm:flex-row items-center justify-center sm:justify-between max-w-xs py-4 space-y-4 sm:space-y-0 sm:space-x-10 transition-opacity duration-1000 ${
+      className={`flex flex-col sm:flex-row items-center justify-center sm:justify-arround max-w-xs py-4 space-y-4 sm:space-y-0 sm:space-x-10 transition-opacity duration-1000 ${
         loading ? "opacity-0" : "opacity-100"
       }`}
     >

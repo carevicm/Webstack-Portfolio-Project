@@ -8,12 +8,12 @@ const ProfileCard = () => {
   return (
     <div className="flex justify-center items-center lg:justify-start lg:items-start w-full mb-4">
       <div className="lg:p-4 h-full">
-        <div className="rounded-full overflow-hidden relative">
+        <div className="rounded-full mb-10 overflow-hidden relative">
           <Image
             src={ContactImg}
             alt="Contact Milan"
-            width={260}
-            height={260}
+            width={250}
+            height={250}
             className="object-cover object-center rounded-full"
             priority
           />
