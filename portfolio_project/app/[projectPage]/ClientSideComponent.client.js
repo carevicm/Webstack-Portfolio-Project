@@ -10,24 +10,15 @@ function ClientSideComponent({ project }) {
 
   const handleBackNavigation = () => {
     console.log("Back navigation triggered");
-
-    // Check if the 'projects' section exists on the current page
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
       console.log("Scrolling to projects section");
       projectsSection.scrollIntoView({ behavior: 'smooth' });
     } else {
       console.log("Navigating to /#projects");
-
-      // Directly set the hash to navigate
       window.location.href = '/#projects';
     }
   };
-
-  
-  
-  
-  
 
   useEffect(() => {
     setIsComponentMounted(true);
