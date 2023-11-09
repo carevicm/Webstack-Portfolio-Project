@@ -6,11 +6,9 @@ jest.mock("next/navigation", () => ({
   useRouter: jest.fn(),
 }));
 
-jest.mock("../utils/LoadingOverlay", () => {
-  return function DummyLoadingOverlay() {
-    return <div>Loading...</div>;
-  };
-});
+jest.mock("next/image", () => () => <img alt="Mock Image" />);
+
+jest.mock("../utils/LoadingOverlay", () => () => <div>Loading...</div>);
 
 describe("ClientSideComponent", () => {
   const mockProject = {
@@ -28,7 +26,6 @@ describe("ClientSideComponent", () => {
   it("renders the loading overlay when the component is not mounted", () => {
     useRouter.mockImplementation(() => ({
       isFallback: true,
-      push: jest.fn(),
     }));
 
     render(<ClientSideComponent project={mockProject} />);
@@ -38,7 +35,6 @@ describe("ClientSideComponent", () => {
   it('renders "Project not found" when there is no project', () => {
     useRouter.mockImplementation(() => ({
       isFallback: false,
-      push: jest.fn(),
     }));
 
     render(<ClientSideComponent />);
@@ -48,7 +44,6 @@ describe("ClientSideComponent", () => {
   it("renders the project details when provided", () => {
     useRouter.mockImplementation(() => ({
       isFallback: false,
-      push: jest.fn(),
     }));
 
     render(<ClientSideComponent project={mockProject} />);
@@ -60,14 +55,23 @@ describe("ClientSideComponent", () => {
   });
 
   it("navigates back when the Go Back span is clicked", () => {
-    const pushMock = jest.fn();
+    const mockScrollIntoView = jest.fn();
+    global.document.getElementById = jest.fn().mockReturnValue({
+      scrollIntoView: mockScrollIntoView,
+    });
+    global.window.location.href = "/somepage";
+
     useRouter.mockImplementation(() => ({
       isFallback: false,
-      push: pushMock,
     }));
 
     render(<ClientSideComponent project={mockProject} />);
     fireEvent.click(screen.getByText("Go Back"));
-    expect(pushMock).toHaveBeenCalledWith("/#projects");
+    expect(mockScrollIntoView).toHaveBeenCalled();
+    document.getElementById.mockReturnValueOnce(null);
+    fireEvent.click(screen.getByText("Go Back"));
+    expect(global.window.location.pathname + global.window.location.hash).toBe(
+      "/#projects"
+    );
   });
 });
