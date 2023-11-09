@@ -12,15 +12,14 @@ function ClientSideComponent({ project }) {
     e.preventDefault();
     const hash = "/#projects";
     if (hash && hash.startsWith("#")) {
-      router.push(hash).then(() => {
+      router.replace(hash).then(() => {
         const targetElement = document.querySelector(hash);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: "smooth" });
         }
       });
     } else {
-      // Regular navigation
-      router.push(hash);
+      router.replace(hash);
     }
   };
 
@@ -53,7 +52,6 @@ function ClientSideComponent({ project }) {
             width={400}
             height={200}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-           
             priority={true}
             className="transition-opacity duration-700 ease-in-out"
             style={imageStyle}
