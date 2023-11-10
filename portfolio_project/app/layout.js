@@ -17,9 +17,15 @@ export default function RootLayout({ children }) {
       <Head>
         <link
           rel="canonical"
-          href="https://registration-forms-d9d10.firebaseapp.com/login"
+          href="https://webstack-portfolio-project-alpha.vercel.app/"
         />
         <link rel="manifest" href="manifest.json" />
+        <meta property="og:image" content="/assets/react_portfolio1.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:description" content="Portfolio Webiste for Milan Carevic, based in Canada." />
+        <meta property="og:title" content="Portfolio Project by Milan Carevic" />
+        <meta property="og:url" content="https://webstack-portfolio-project-alpha.vercel.app/" />
         <meta
           http-equiv="Content-Security-Policy"
           content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;"
