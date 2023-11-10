@@ -5,8 +5,8 @@
     "description": "Dynamic Website with & Next and React",
     "image": "/images/projects/react_portfolio1.webp",
     "tag": ["All", "Web"],
-    "gitUrl": "/",
-    "previewUrl": "/",
+    "gitUrl": "https://github.com/carevicm/Webstack-Portfolio-Project",
+    "previewUrl": "https://webstack-portfolio-project-alpha.vercel.app/",
     "skills": "Next.js React.js Tailwind CSS",
     "text": "This portfolio website stands as a testament to the culmination of skills, experiences, and projects of a dedicated developer. Built harnessing the power of Next.js, React, and the aesthetic capabilities of TailwindCSS, the website offers a seamless and interactive user experience. It's meticulously designed to provide visitors with a comprehensive view of the developer's journey, all while maintaining a modern and captivating design.",
     "techskills": [
