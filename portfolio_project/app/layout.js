@@ -26,11 +26,11 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:title"
-          content="Portfolio Project by Milan Carevic"
+          content="https://webstack-portfolio-project-alpha.vercel.app/#contact"
         />
         <meta
           property="og:description"
-          content="Portfolio Website by Milan Carevic, Canada."
+          content="https://webstack-portfolio-project-alpha.vercel.app/#about"
         />
         <meta
           property="og:image"
