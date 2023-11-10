@@ -14,34 +14,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" style={{ height: "100%" }}>
+      <html lang="en" style={{ height: "100%" }}>
       <Head>
-        <link
-          rel="canonical"
-          href="https://webstack-portfolio-project-alpha.vercel.app/"
-        />
+        <link rel="canonical" href="https://webstack-portfolio-project-alpha.vercel.app/" />
         <link rel="manifest" href="manifest.json" />
-        <meta
-          property="og:url"
-          content="https://webstack-portfolio-project-alpha.vercel.app/"
-        />
-        <meta
-          property="og:title"
-          content="Portfolio Project by Milan Carevic"
-        />
-        <meta
-          property="og:description"
-          content="Portfolio Website by Milan Carevic, Canada."
-        />
-        <meta
-          property="og:image"
-          content="https://webstack-portfolio-project-alpha.vercel.app/assets/react_portfolio1.png"
-        />
-        <meta property="og:image:width" content="1200" />
+        <meta property="og:url" content="https://webstack-portfolio-project-alpha.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Portfolio Project by Milan Carevic" />
+        <meta property="og:description" content="Portfolio Website by Milan Carevic, Canada." />
+        <meta property="og:image" content="https://webstack-portfolio-project-alpha.vercel.app/assets/react_portfolio1.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1050" />
         <meta property="og:image:height" content="630" />
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;"
-        ></meta>
+        <meta property="og:locale" content="en_US" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;"></meta>
         <meta name="theme-color" content="#121212" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
