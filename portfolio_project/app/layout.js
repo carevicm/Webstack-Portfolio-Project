@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         ></meta>
         <meta name="theme-color" content="#121212" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.webp" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${inter.className} `} suppressHydrationWarning={true}>
         <Navbar />
