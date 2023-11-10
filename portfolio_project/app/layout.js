@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Portfolio Project by Milan Carevic",
-  description: "Portfolio Webiste for Milan Carevic, based in Canada. ",
+  description: "Portfolio Webiste by Milan Carevic, Canada. ",
 };
 
 export default function RootLayout({ children }) {
@@ -26,11 +26,11 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:title"
-          content="https://webstack-portfolio-project-alpha.vercel.app/#contact"
+          content="Portfolio Project by Milan Carevic"
         />
         <meta
           property="og:description"
-          content="https://webstack-portfolio-project-alpha.vercel.app/#about"
+          content="Portfolio Website by Milan Carevic, Canada."
         />
         <meta
           property="og:image"
