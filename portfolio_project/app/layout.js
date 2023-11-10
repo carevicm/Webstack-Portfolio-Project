@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Portfolio Project by Milan Carevic" />
         <meta property="og:description" content="Portfolio Website by Milan Carevic, Canada." />
-        <meta property="og:image" content="https://webstack-portfolio-project-alpha.vercel.app/assets/react_portfolio1.png" />
+        <meta property="og:image" content="https://webstack-portfolio-project-alpha.vercel.app/react_portfolio1.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1050" />
         <meta property="og:image:height" content="630" />
