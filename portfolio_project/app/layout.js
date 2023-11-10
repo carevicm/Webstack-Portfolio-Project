@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:height" content="630" />
         <meta property="og:description" content="Portfolio Webiste for Milan Carevic, based in Canada." />
         <meta property="og:title" content="Portfolio Project by Milan Carevic" />
-        <meta property="og:url" content="https://webstack-portfolio-project-alpha.vercel.app/" />
+        <meta property="og:url" content="https://webstack-portfolio-project-alpha.vercel.app/assets/react_portfolio1.webp" />
         <meta
           http-equiv="Content-Security-Policy"
           content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;"
