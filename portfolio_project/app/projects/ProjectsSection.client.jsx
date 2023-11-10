@@ -1,9 +1,11 @@
 "use client";
-import React, { useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
 import useProjects from "./useProjects";
-import Pagination from "../utils/PaginationProject";
 
+
+import Pagination from "../utils/PaginationProject";
+const ProjectCardSkeleton = dynamic(() => import("./ProjectCardSkeleton"), { ssr: false });
 const ProjectCard = dynamic(() => import("./ProjectCard"), { ssr: false });
 const ProjectTag = dynamic(() => import("./ProjectTag"), { ssr: false });
 
@@ -16,6 +18,9 @@ const ProjectsSection = () => {
     filteredProjects,
     totalProjects,
   } = useProjects();
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [showProjects, setShowProjects] = useState(false);
 
   const handleTagChange = useCallback(
     (newTag) => {
@@ -31,6 +36,16 @@ const ProjectsSection = () => {
     },
     [setCurrentPage]
   );
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      const transitionTimer = setTimeout(() => {
+        setShowProjects(true);
+      }, 300);
+      return () => clearTimeout(transitionTimer);
+    }, 900);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section id="projects">
@@ -59,20 +74,29 @@ const ProjectsSection = () => {
           isSelected={tag === "Future"}
         />
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-5 gap-4 grid-auto-rows-minmax">
-        {filteredProjects.map((project) => (
-          <li key={project.id}>
-            <ProjectCard
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </li>
-        ))}
-      </ul>
+      <div className={isLoading ? "animate-fade-in-out" : ""}>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-5 gap-4 grid-auto-rows-minmax">
+          {isLoading
+            ? Array(6)
+                .fill(0)
+                .map((_, index) => <ProjectCardSkeleton key={index} />)
+            : filteredProjects.map((project) => (
+                <li
+                  key={project.id}
+                  className={showProjects ? "animate-fade-in" : ""}
+                >
+                  <ProjectCard
+                    id={project.id}
+                    title={project.title}
+                    description={project.description}
+                    imgUrl={project.image}
+                    gitUrl={project.gitUrl}
+                    previewUrl={project.previewUrl}
+                  />
+                </li>
+              ))}
+        </ul>
+      </div>
       <Pagination
         projectsPerPage={6}
         totalProjects={totalProjects}

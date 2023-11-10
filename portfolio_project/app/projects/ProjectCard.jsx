@@ -13,7 +13,7 @@ const DynamicProjectInfo = dynamic(() => import("./ProjectInfo"), {
 const ProjectCard = React.memo(
   ({ id, imgUrl, title, description, gitUrl, previewUrl }) => {
     return (
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full min-h-[300px]">
         <DynamicProjectImage imgUrl={imgUrl} title={title} id={id} />
         <DynamicProjectInfo
           title={title}
@@ -26,5 +26,5 @@ const ProjectCard = React.memo(
   }
 );
 
-ProjectCard.displayName = 'ProjectCard';
+ProjectCard.displayName = "ProjectCard";
 export default ProjectCard;

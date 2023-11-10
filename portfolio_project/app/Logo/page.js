@@ -9,9 +9,10 @@ const Logo = () => {
         loop
         muted
         playsInline
-        aria-label="Animated logo of Milan Carevic Website"
+        aria-hidden="true"
       >
         <source src="/assets/logo.webm" type="video/webm" />
+        <img src="/assets/logo.webp" alt="Logo" />
       </video>
     </div>
   );

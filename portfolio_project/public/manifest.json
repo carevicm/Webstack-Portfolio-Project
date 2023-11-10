@@ -2,6 +2,10 @@
   "name": "Milan Carevic Portfolio",
   "short_name": "Milan Portfolio",
   "description": "Portfolio Website for Milan Carevic, based in Canada.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
   "icons": [
     {
       "src": "/assets/logo.webp",
@@ -13,10 +17,12 @@
       "sizes": "32x32",
       "type": "image/webp",
       "purpose": "maskable"
+    },
+    {
+      "src": "/assets/maskable.webp",
+      "sizes": "196x196",
+      "type": "image/webp",
+      "purpose": "maskable"
     }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#121212"
+  ]
 }

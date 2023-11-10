@@ -17,6 +17,24 @@ module.exports = {
         spacing: "margin, padding",
         opacity: "opacity",
       },
+      keyframes: {
+        fadeInOut: {
+          "0%, 100%": { opacity: "0" },
+          "50%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in-out": "fadeInOut 2s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+      },
     },
   },
   plugins: [require("autoprefixer")],

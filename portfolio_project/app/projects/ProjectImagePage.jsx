@@ -14,6 +14,8 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
     height: "100%",
     objectFit: "cover",
     objectPosition: "center",
+    layout: "responsive",
+    loading: "lazy",
   };
 
   return (
@@ -22,9 +24,8 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
         <Image
           src={imgUrl}
           alt={title}
-          width={500}
-          height={250}
-          priority={true}
+          width={400}
+          height={400}
           className="transition-opacity duration-700 ease-in-out"
           style={imageStyle}
         />

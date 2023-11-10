@@ -20,5 +20,5 @@ const ProjectTag = React.memo(({ name, onClick, isSelected }) => {
   );
 });
 
-ProjectTag.displayName = 'ProjectTag';
+ProjectTag.displayName = "ProjectTag";
 export default ProjectTag;

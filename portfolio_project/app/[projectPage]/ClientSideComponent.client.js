@@ -55,23 +55,23 @@ function ClientSideComponent({ project }) {
         )}
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute top-1/2 left-0 right-0 ml-6 mt-6 p-4 sm:p-8 md:p-8 transform -translate-y-1/2 z-10 text-start sm:text-start">
-    <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mx-4">
-      {project.title}
-    </h1>
-    <h2 className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2 font-semibold mx-4">
-      {project.skills}
-    </h2>
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mx-4">
+            {project.title}
+          </h1>
+          <h2 className="xs:text-xs sm:text-sm md:text-md lg:text-lg mt-2 font-semibold mx-4">
+            {project.skills}
+          </h2>
         </div>
       </div>
       <div className="max-w-full mx-auto ml-10 mr-10 p-4 sm:p-6 md:p-8 flex flex-col md:flex-row justify-between gap-16">
         <div className="flex-grow max-w-7xl lg:max-w-7xl">
           <div className="flex flex-row justify-between items-center mb-4">
-          <span
-            onClick={handleBackNavigation}
-            className="mt-8 mb-8 text-center px-2 sm:px-2 py-3 sm:py-3 rounded-3xl bg-gradient-to-r from-[#4f74a1] to-[#60a5fa] shadow-sm shadow-[#d1d5db] text-white font-bold text-md sm:text-lg cursor-pointer transition-all duration-700 ease-in-out"
-          >
-            Go Back
-          </span>
+            <span
+              onClick={handleBackNavigation}
+              className="mt-8 mb-8 text-center px-2 sm:px-2 py-3 sm:py-3 rounded-3xl bg-gradient-to-r from-[#4f74a1] to-[#60a5fa] shadow-sm shadow-[#d1d5db] text-white font-bold text-md sm:text-lg cursor-pointer transition-all duration-700 ease-in-out"
+            >
+              Go Back
+            </span>
           </div>
           <h3 className="text-lg md:text-xl lg:text-3xl font-bold text-white mt-8 mb-12">
             Project Overview
@@ -118,21 +118,20 @@ function ClientSideComponent({ project }) {
           </div>
         </div>
         <div className="flex-none w-full sm:w-auto max-w-xs mx-auto mt-8 mb-8">
-  <div className="flex flex-col items-start md:items-start sm:items-start bg-gradient-to-r text-black from-[#a1a1aa] to-[#93c5fd] shadow-lg shadow-[#d1d5db] rounded-3xl hover:scale-105 ease-in duration-300">
-    <div className="p-4">
-      <p className="p-3 text-lg font-bold pb-2">Technologies</p>
-      <div className="flex flex-col gap-2 p-2">
-        {project.techskills &&
-          project.techskills.map((tech, index) => (
-            <div key={index} className="p-2">
-              {tech}
+          <div className="flex flex-col items-start md:items-start sm:items-start bg-gradient-to-r text-black from-[#a1a1aa] to-[#93c5fd] shadow-lg shadow-[#d1d5db] rounded-3xl hover:scale-105 ease-in duration-300">
+            <div className="p-4">
+              <p className="p-3 text-lg font-bold pb-2">Technologies</p>
+              <div className="flex flex-col gap-2 p-2">
+                {project.techskills &&
+                  project.techskills.map((tech, index) => (
+                    <div key={index} className="p-2">
+                      {tech}
+                    </div>
+                  ))}
+              </div>
             </div>
-          ))}
-      </div>
-    </div>
-  </div>
-</div>
-
+          </div>
+        </div>
       </div>
     </div>
   );

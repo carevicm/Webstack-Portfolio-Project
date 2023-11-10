@@ -34,7 +34,7 @@ const Pagination = ({
 
   return (
     <nav>
-      <ul className="list-style-none flex justify-center mt-4">
+      <ul className="list-style-none flex justify-center mt-4 overflow-x-auto">
         <li>
           <button
             onClick={() => paginate(currentPage - 1)}
