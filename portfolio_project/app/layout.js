@@ -14,7 +14,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" style={{ height: "100%" }}>
-      <html lang="en" style={{ height: "100%" }}>
       <Head>
         <link rel="canonical" href="https://webstack-portfolio-project-alpha.vercel.app/" />
         <link rel="manifest" href="manifest.json" />
