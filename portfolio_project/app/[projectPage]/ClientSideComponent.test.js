@@ -23,6 +23,17 @@ describe("ClientSideComponent", () => {
     techskills: ["React", "Next.js"],
   };
 
+  const mockReplace = jest.fn();
+  const mockPush = jest.fn();
+
+  beforeEach(() => {
+    useRouter.mockImplementation(() => ({
+      isFallback: false,
+      replace: mockReplace,
+      push: mockPush,
+    }));
+  });
+
   it("renders the loading overlay when the component is not mounted", () => {
     useRouter.mockImplementation(() => ({
       isFallback: true,
@@ -59,19 +70,16 @@ describe("ClientSideComponent", () => {
     global.document.getElementById = jest.fn().mockReturnValue({
       scrollIntoView: mockScrollIntoView,
     });
-    global.window.location.href = "/somepage";
-
-    useRouter.mockImplementation(() => ({
-      isFallback: false,
-    }));
 
     render(<ClientSideComponent project={mockProject} />);
     fireEvent.click(screen.getByText("Go Back"));
     expect(mockScrollIntoView).toHaveBeenCalled();
+    expect(mockReplace).toHaveBeenCalledWith("/#projects", undefined, {
+      shallow: true,
+    });
+
     document.getElementById.mockReturnValueOnce(null);
     fireEvent.click(screen.getByText("Go Back"));
-    expect(global.window.location.pathname + global.window.location.hash).toBe(
-      "/#projects"
-    );
+    expect(mockPush).toHaveBeenCalledWith("/#projects");
   });
 });
