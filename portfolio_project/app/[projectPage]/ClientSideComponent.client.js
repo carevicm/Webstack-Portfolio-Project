@@ -14,9 +14,10 @@ function ClientSideComponent({ project }) {
     if (projectsSection) {
       console.log("Scrolling to projects section");
       projectsSection.scrollIntoView({ behavior: "smooth" });
+      router.replace("/#projects", undefined, { shallow: true });
     } else {
       console.log("Navigating to /#projects");
-      window.location.href = "/#projects";
+      router.push("/#projects");
     }
   };
 
@@ -37,6 +38,7 @@ function ClientSideComponent({ project }) {
     height: "100%",
     objectFit: "cover",
     objectPosition: "center",
+    loading: "lazy",
   };
 
   return (
