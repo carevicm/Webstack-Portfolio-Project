@@ -24,14 +24,15 @@ describe("ClientSideComponent", () => {
   };
 
   const mockReplace = jest.fn();
-  const mockPush = jest.fn();
 
   beforeEach(() => {
     useRouter.mockImplementation(() => ({
       isFallback: false,
       replace: mockReplace,
-      push: mockPush,
     }));
+
+    delete window.location;
+    window.location = { href: '' };
   });
 
   it("renders the loading overlay when the component is not mounted", () => {
@@ -74,12 +75,10 @@ describe("ClientSideComponent", () => {
     render(<ClientSideComponent project={mockProject} />);
     fireEvent.click(screen.getByText("Go Back"));
     expect(mockScrollIntoView).toHaveBeenCalled();
-    expect(mockReplace).toHaveBeenCalledWith("/#projects", undefined, {
-      shallow: true,
-    });
+    expect(mockReplace).toHaveBeenCalledWith("/#projects", undefined, { shallow: true });
 
     document.getElementById.mockReturnValueOnce(null);
     fireEvent.click(screen.getByText("Go Back"));
-    expect(mockPush).toHaveBeenCalledWith("/#projects");
+    expect(window.location.href).toBe("/#projects");
   });
 });

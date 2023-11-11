@@ -17,7 +17,7 @@ function ClientSideComponent({ project }) {
       router.replace("/#projects", undefined, { shallow: true });
     } else {
       console.log("Navigating to /#projects");
-      router.push("/#projects");
+      window.location.href = "/#projects";
     }
   };
 
