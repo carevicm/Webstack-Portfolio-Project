@@ -6,15 +6,15 @@ const ProfileCard = () => {
   const ContactImg = "/assets/contact-me.webp";
 
   return (
-    <div className="flex justify-center items-center lg:justify-start lg:items-start w-full mb-4">
+    <div className="flex justify-start items-start lg:justify-start lg:items-start w-full mb-4">
       <div className="lg:p-4 h-full">
-        <div className="rounded-full mb-10 overflow-hidden relative">
+        <div className="mb-10 overflow-hidden relative">
           <Image
             src={ContactImg}
             alt="Contact Milan"
             width={250}
             height={250}
-            className="object-cover object-center rounded-full"
+            className="object-cover object-center rounded-3xl"
             priority
           />
         </div>

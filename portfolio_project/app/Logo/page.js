@@ -9,7 +9,7 @@ const Logo = () => {
         loop
         muted
         playsInline
-        aria-hidden="true"
+        aria-label="Animated rotating logo with CM letters for Personal Portfolio Website"
       >
         <source src="/assets/logo.webm" type="video/webm" />
         <img src="/assets/logo.webp" alt="Logo" />
@@ -17,5 +17,4 @@ const Logo = () => {
     </div>
   );
 };
-
 export default React.memo(Logo);

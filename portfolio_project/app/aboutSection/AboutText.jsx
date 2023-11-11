@@ -5,7 +5,7 @@ const AboutText = () => (
     <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
     <p className="text-base lg:text-lg">
       Hello! Iam Milan Carevic, a Full-Stack Developer with a strong background
-      in web development. My journey began in 2018, exploring e-commerce
+      in web development. My journey began in 2018, exploring < br></br> e-commerce
       platforms like WordPress and Shopify, evolving into a specialization in
       crafting mobile-responsive front-end UI applications with seamless backend
       integrations.

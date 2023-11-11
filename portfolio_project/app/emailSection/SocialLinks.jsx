@@ -42,7 +42,7 @@ const SocialLinks = () => {
 
   return (
     <div
-      className={`flex justify-center space-x-6 md:space-x-24 mt-4 transition-opacity duration-1000 ${
+      className={`flex justify-start space-x-6 md:space-x-24 mt-4 transition-opacity duration-1000 ${
         loading ? "opacity-0" : "opacity-100"
       }`}
     >

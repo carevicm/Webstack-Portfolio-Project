@@ -16,18 +16,18 @@ const AboutSection = () => {
 
   return (
     <section className="text-white mb-10" id="about">
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center py-2 px-2 sm:py-4 xl:px-4">
-        <div className="min-w-[320px] min-h-[320px]">
-          <DynamicProfileImage />
-        </div>
-        <div className="mt-4 md:mt-0 text-left flex flex-col">
-          <DynamicAboutText />
-          <div className="min-h-[300px] transition-all duration-300">
-            <DynamicTabs currentTab={tab} onTabChange={setTab} />
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="order-1">
+        <DynamicProfileImage />
+      </div>
+      <div className="order-2 text-left mt-4 md:mt-0">
+        <DynamicAboutText />
+        <div className="min-h-[300px] transition-all duration-300">
+          <DynamicTabs currentTab={tab} onTabChange={setTab} />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
