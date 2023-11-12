@@ -76,7 +76,7 @@
       "Rate Limiting: Ensures protection against brute force attacks or spammed requests.",
       "Advanced User Authentication: Features JWT for token generation and management, bcrypt for password hashing and validation, and custom error handling for seamless user experience.",
       "Structured Middleware: Implements middleware functions for error handling and authentication checks.",
-      "The project architecture emphasizes modularity, clarity, and maintainability while prioritizing scalability, guaranteeing enduring adaptability and operational efficiency."
+      "The project architecture: emphasizes modularity, clarity, and maintainability while prioritizing scalability, guaranteeing enduring adaptability and operational efficiency."
     ]
   },
   {
@@ -231,7 +231,7 @@
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/Bootstrap_Project-PawsNMeet",
     "previewUrl": "https://carevicm.github.io/Bootstrap_Project-PawsNMeet/",
-    "skills": "/",
+    "skills": "HTML CSS Bootstrap Responsive Design",
     "text": "PawsNMeet is a conceptual web platform, meticulously crafted to demonstrate advanced web development skills. While the theme revolves around pet enthusiasts, the primary objective of this project is to showcase the potential of modern web design and development techniques.",
     "techskills": [
       "HTML",
@@ -406,7 +406,7 @@
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/CSS-Projects",
     "previewUrl": "https://carevicm.github.io/CSS-Projects/",
-    "skills": "/",
+    "skills": "CSS3 HTML5",
     "text": " Dive into a trio of projects that encapsulate Milan Carevic's journey in the world of CSS. Each project, be it the vibrant flag of Laos, a quirky meme, or a responsive design agency, showcases a different skill set, all bound together by the common thread of impeccable CSS craftsmanship.",
     "techskills": ["CSS3", "HTML5", "Responsive Design with @media queries"],
     "features": [
@@ -423,7 +423,7 @@
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/HTML-Portfolio/tree/main",
     "previewUrl": "https://carevicm.github.io/HTML-Portfolio/",
-    "skills": "/",
+    "skills": "HTML CSS",
     "text": "Dive into the world of HTML creations, where each project is about coding and design passion. Projects range from movie rankings to birthday invitations and reflect attention to detail, design aesthetics, and user experience. ",
     "techskills": ["HTML5", "CSS3", "Responsive Web Design"],
     "features": [
@@ -477,8 +477,9 @@
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/Milan-Carevic-Resume",
     "previewUrl": "https://carevicm.github.io/Milan-Carevic-Resume/",
+    "skills": "HTML CSS",
     "text": "Milan Carevic's digital resume showcases his extensive experience as a Full-Stack Software Developer with a strong background in designing, developing, and supporting cloud-native enterprise and consumer solutions. The resume highlights key strengths, work experience, educational background, certifications, and special skills.",
-    "techskills": ["/"],
+    "techskills": ["HTML5", "CSS3", "Responsive Design"],
     "features": [
       "Professional Header: A dedicated header section with personal details, contact information, and links to LinkedIn and GitHub profiles.",
       "Key Strengths Section: A concise list of professional strengths, emphasizing proficiency in full-stack development and cloud services.",
@@ -544,7 +545,7 @@
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/Node.js_Express.js-Band_Name_Generator",
     "previewUrl": "/",
-    "skills": "/",
+    "skills": "Node.js Express.js Middleware Integration",
     "text": "This application is designed to provide users with a unique band name based on their input. By combining the name of a street and a pet, we generate a band name that's both fun and memorable.",
     "techskills": [
       "Node.js",

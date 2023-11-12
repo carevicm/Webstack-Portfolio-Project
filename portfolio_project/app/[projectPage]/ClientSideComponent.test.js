@@ -33,7 +33,7 @@ describe("ClientSideComponent", () => {
     }));
 
     delete window.location;
-    window.location = { href: '' };
+    window.location = { href: "" };
   });
 
   afterEach(() => {
@@ -79,17 +79,15 @@ describe("ClientSideComponent", () => {
 
     render(<ClientSideComponent project={mockProject} />);
     fireEvent.click(screen.getByText("Go Back"));
-
-    // Fast-forward time
     jest.runAllTimers();
 
     expect(mockScrollIntoView).toHaveBeenCalled();
-    expect(mockReplace).toHaveBeenCalledWith("/#projects", undefined, { shallow: true });
+    expect(mockReplace).toHaveBeenCalledWith("/#projects", undefined, {
+      shallow: true,
+    });
 
     document.getElementById.mockReturnValueOnce(null);
     fireEvent.click(screen.getByText("Go Back"));
-
-    // Fast-forward time again
     jest.runAllTimers();
 
     expect(window.location.href).toBe("/#projects");
