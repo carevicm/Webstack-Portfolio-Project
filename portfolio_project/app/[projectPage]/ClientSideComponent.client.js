@@ -9,36 +9,16 @@ function ClientSideComponent({ project }) {
   const router = useRouter();
 
   const handleBackNavigation = () => {
-    console.log("Back navigation triggered");
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      console.log("Scrolling to projects section");
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-      router.replace("/#projects", undefined, { shallow: true });
-    } else {
-      console.log("Navigating to /#projects");
-      window.location.href = "/#projects";
-    }
-  };
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      if (window.location.hash === '#projects') {
-        const projectsSection = document.getElementById('projects');
-        if (projectsSection) {
-          projectsSection.scrollIntoView({ behavior: 'smooth' });
-        }
+    setTimeout(() => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        router.replace("/#projects", undefined, { shallow: true });
+      } else {
+        window.location.href = "/#projects";
       }
-    };
-
-    // Listen for route changes
-    router.events.on('hashChangeComplete', handleRouteChange);
-
-    // Clean up the event listener
-    return () => {
-      router.events.off('hashChangeComplete', handleRouteChange);
-    };
-  }, [router]); // Depend on router
+    }, 1000);
+  };  
 
   useEffect(() => {
     setIsComponentMounted(true);
