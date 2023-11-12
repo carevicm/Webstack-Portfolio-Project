@@ -26,6 +26,7 @@ describe("ClientSideComponent", () => {
   const mockReplace = jest.fn();
 
   beforeEach(() => {
+    jest.useFakeTimers();
     useRouter.mockImplementation(() => ({
       isFallback: false,
       replace: mockReplace,
@@ -33,6 +34,10 @@ describe("ClientSideComponent", () => {
 
     delete window.location;
     window.location = { href: '' };
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
   });
 
   it("renders the loading overlay when the component is not mounted", () => {
@@ -66,7 +71,7 @@ describe("ClientSideComponent", () => {
     expect(screen.getByText("Feature 2:")).toBeInTheDocument();
   });
 
-  it("navigates back when the Go Back span is clicked", () => {
+  it("navigates back when the Go Back span is clicked", async () => {
     const mockScrollIntoView = jest.fn();
     global.document.getElementById = jest.fn().mockReturnValue({
       scrollIntoView: mockScrollIntoView,
@@ -74,11 +79,19 @@ describe("ClientSideComponent", () => {
 
     render(<ClientSideComponent project={mockProject} />);
     fireEvent.click(screen.getByText("Go Back"));
+
+    // Fast-forward time
+    jest.runAllTimers();
+
     expect(mockScrollIntoView).toHaveBeenCalled();
     expect(mockReplace).toHaveBeenCalledWith("/#projects", undefined, { shallow: true });
 
     document.getElementById.mockReturnValueOnce(null);
     fireEvent.click(screen.getByText("Go Back"));
+
+    // Fast-forward time again
+    jest.runAllTimers();
+
     expect(window.location.href).toBe("/#projects");
   });
 });
