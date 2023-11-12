@@ -10,17 +10,22 @@ function ClientSideComponent({ project }) {
 
   const handleBackNavigation = () => {
     console.log("Back navigation triggered");
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      console.log("Scrolling to projects section");
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-      router.replace("/#projects", undefined, { shallow: true });
-    } else {
-      console.log("Navigating to /#projects");
-      window.location.href = "/#projects";
-    }
+  
+    // Use setTimeout to allow time for dynamic content to load
+    setTimeout(() => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        console.log("Scrolling to projects section");
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+  
+        // Update the URL without adding a new entry to the history stack
+        router.replace("/#projects", undefined, { shallow: true });
+      } else {
+        console.log("Navigating to /#projects");
+        window.location.href = "/#projects";
+      }
+    }, 1000); // Adjust the delay as needed (1000 milliseconds = 1 second)
   };
-
   useEffect(() => {
     const handleRouteChange = () => {
       if (window.location.hash === '#projects') {
@@ -38,7 +43,8 @@ function ClientSideComponent({ project }) {
     return () => {
       router.events.off('hashChangeComplete', handleRouteChange);
     };
-  }, [router]); // Depend on router
+  }, [router.events]);  
+
   useEffect(() => {
     setIsComponentMounted(true);
   }, []);
