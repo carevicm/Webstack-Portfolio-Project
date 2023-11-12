@@ -9,17 +9,24 @@ function ClientSideComponent({ project }) {
   const router = useRouter();
 
   const handleBackNavigation = () => {
-    console.log("Back navigation triggered");
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      console.log("Scrolling to projects section");
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-      router.replace("/#projects", undefined, { shallow: true });
-    } else {
-      console.log("Navigating to /#projects");
-      window.location.href = "/#projects";
-    }
+    router.push("/#projects");
   };
+
+  useEffect(() => {
+    const checkHashAndScroll = () => {
+      if (window.location.hash === "#projects") {
+        const projectsSection = document.getElementById("projects");
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+    checkHashAndScroll();
+    window.addEventListener("hashchange", checkHashAndScroll, false);
+    return () => {
+      window.removeEventListener("hashchange", checkHashAndScroll, false);
+    };
+  }, []);
 
   useEffect(() => {
     setIsComponentMounted(true);

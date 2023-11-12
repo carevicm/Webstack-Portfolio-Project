@@ -11,9 +11,7 @@ const Logo = () => {
         playsInline
         aria-label="Animated rotating logo with CM letters for Personal Portfolio Website"
       >
-        <source src="/assets/logo.webm" type="video/webm" />
         <source src="/assets/logo.mp4" type="video/mp4" />
-        <img src="/assets/logo.webp" alt="Logo" />
         <img src="/assets/logo.png" alt="Logo" />
       </video>
     </div>
