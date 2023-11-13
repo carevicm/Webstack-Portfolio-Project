@@ -2,11 +2,7 @@
 
 Personal Portfolio Website
 Overview:
-This portfolio website stands as a testament to the culmination of skills, experiences, and projects of a dedicated developer.
- Built harnessing the power of Next.js, React, and the aesthetic capabilities of TailwindCSS, 
- the website offers a seamless and interactive user experience. 
- It's meticulously designed to provide visitors with a comprehensive view of the developer's journey, 
- all while maintaining a modern and captivating design.
+This website serves as a collection of skills, experiences, and projects. The website provides a seamless and interactive user experience by leveraging the power of Next.js, React, and the aesthetic capabilities of Tailwind CSS. It's been meticulously designed to give visitors a comprehensive view of my journey while still maintaining a modern and captivating design.
 
 
 Features:
