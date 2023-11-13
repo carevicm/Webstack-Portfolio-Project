@@ -13,24 +13,14 @@ const DISLIKE_ACTION = "DISLIKE_ACTION";
 function reducer(state, action) {
   switch (action.type) {
     case LIKE_ACTION:
-      let newDislikeCount =
-        state.activeBtn === "dislike" && state.dislikeCount > 0
-          ? state.dislikeCount - 1
-          : state.dislikeCount;
       return {
         ...state,
         likeCount: state.likeCount + 1,
-        dislikeCount: newDislikeCount,
         activeBtn: "like",
       };
     case DISLIKE_ACTION:
-      let newLikeCount =
-        state.activeBtn === "like" && state.likeCount > 0
-          ? state.likeCount - 1
-          : state.likeCount;
       return {
         ...state,
-        likeCount: newLikeCount,
         dislikeCount: state.dislikeCount + 1,
         activeBtn: "dislike",
       };
