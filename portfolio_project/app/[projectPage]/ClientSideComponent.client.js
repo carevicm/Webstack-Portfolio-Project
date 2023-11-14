@@ -9,21 +9,18 @@ function ClientSideComponent({ project }) {
   const router = useRouter();
 
   const handleBackNavigation = () => {
-    setTimeout(() => {
-      const projectsSection = document.getElementById("projects");
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: "smooth" });
-        router.replace("/#projects", undefined, { shallow: true });
-      } else {
-        window.location.href = "/#projects";
-      }
-    }, 1000);
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+      router.replace("/#projects", undefined, { shallow: true });
+    } else {
+      window.location.href = "/#projects";
+    }
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-  
+  }, [router.asPath]);
 
   useEffect(() => {
     setIsComponentMounted(true);
