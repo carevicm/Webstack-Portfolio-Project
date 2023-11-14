@@ -9,20 +9,8 @@ function ClientSideComponent({ project }) {
   const router = useRouter();
 
   const handleBackNavigation = () => {
-    router.back();
+    router.push('/#projects');
   };
-
-  useEffect(() => {
-    const handlePopState = (event) => {
-      router.push("/#projects");
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, [router]);
 
   useEffect(() => {
     setIsComponentMounted(true);
