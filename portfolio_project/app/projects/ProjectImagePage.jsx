@@ -10,10 +10,10 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
   const isVisible = useIntersectionObserver(imageRef);
   const router = useRouter();
 
-  const handleMoreInfoClick = () => {
+  const handleNavigate = () => {
     router.push(`/${id}`);
   };
-  
+
   const imageStyle = {
     width: "100%",
     height: "100%",
@@ -36,7 +36,8 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
         />
       )}
       <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-700 ease-in-out items-center justify-center z-10">
-      <span onClick={handleMoreInfoClick}
+        <span
+          onClick={handleNavigate}
           aria-label={`More about ${title}`}
           role="button"
           tabIndex={0}

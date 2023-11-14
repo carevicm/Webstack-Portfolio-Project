@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundaryPage";
-import Link from 'next/link';
 
 import HeroSection from "./introSection/HeroSection";
 import AboutSection from "./aboutSection/AboutSection";
@@ -17,7 +16,6 @@ export default function Home() {
           <HeroSection />
           <AboutSection />
           <SkillsSection />
-          <Link href="/#projects" scroll={false}>Projects</Link>
           <ProjectsSection />
           <EmailSection />
         </ErrorBoundary>
