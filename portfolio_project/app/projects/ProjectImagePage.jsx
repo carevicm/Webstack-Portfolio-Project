@@ -14,7 +14,7 @@ const ProjectImage = React.memo(({ imgUrl, title, id }) => {
     window.history.pushState({}, "", window.location.href);
     router.push(`/${id}`);
   };
-  
+
   const imageStyle = {
     width: "100%",
     height: "100%",

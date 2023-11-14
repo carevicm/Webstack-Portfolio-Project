@@ -15,7 +15,7 @@ function ClientSideComponent({ project }) {
       if (projectsSection) {
         projectsSection.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100);
+    }, 1500);
   };
 
   useEffect(() => {

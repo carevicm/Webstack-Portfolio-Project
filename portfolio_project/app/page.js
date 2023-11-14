@@ -12,8 +12,8 @@ export default function Home() {
   useEffect(() => {
     const checkHashAndScroll = () => {
       const hash = window.location.hash;
-      if (hash) {
-        const section = document.getElementById(hash.substring(1));
+      if (hash && hash === "#projects") {
+        const section = document.getElementById("projects");
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
         }
