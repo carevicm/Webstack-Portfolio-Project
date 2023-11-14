@@ -8,26 +8,6 @@ function ClientSideComponent({ project }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
   const router = useRouter();
 
-  const handleBackNavigation = () => {
-    window.location.href = "/#projects";
-    setTimeout(() => {
-      const projectsSection = document.getElementById("projects");
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 1500);
-  };
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const section = document.querySelector(hash);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, []);
-
   useEffect(() => {
     setIsComponentMounted(true);
   }, []);
@@ -75,8 +55,7 @@ function ClientSideComponent({ project }) {
       <div className="max-w-full mx-auto ml-10 mr-10 p-4 sm:p-6 md:p-8 flex flex-col md:flex-row justify-between gap-16">
         <div className="flex-grow max-w-7xl lg:max-w-7xl">
           <div className="flex flex-row justify-between items-center mb-4">
-            <span
-              onClick={handleBackNavigation}
+          <span onClick={() => router.push('/#projects', undefined, { scroll: false })}
               className="mt-8 mb-8 text-center px-2 sm:px-2 py-3 sm:py-3 rounded-3xl bg-gradient-to-r from-[#4f74a1] to-[#60a5fa] shadow-sm shadow-[#d1d5db] text-white font-bold text-md sm:text-lg cursor-pointer transition-all duration-700 ease-in-out"
             >
               Go Back
