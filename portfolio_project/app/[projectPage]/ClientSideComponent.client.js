@@ -23,6 +23,21 @@ function ClientSideComponent({ project }) {
   }, [router.asPath]);
 
   useEffect(() => {
+    const handlePopState = () => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  
+    window.addEventListener('popstate', handlePopState);
+  
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
+  useEffect(() => {
     setIsComponentMounted(true);
   }, []);
 
