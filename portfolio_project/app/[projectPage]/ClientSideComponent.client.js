@@ -9,8 +9,16 @@ function ClientSideComponent({ project }) {
   const router = useRouter();
 
   const handleBackNavigation = () => {
-    router.push('/#projects');
-  };
+    setTimeout(() => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        router.replace("/#projects", undefined, { shallow: true });
+      } else {
+        window.location.href = "/#projects";
+      }
+    }, 1000);
+  };  
 
   useEffect(() => {
     setIsComponentMounted(true);
