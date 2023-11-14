@@ -18,7 +18,12 @@ function ClientSideComponent({ project }) {
         window.location.href = "/#projects";
       }
     }, 1000);
-  };  
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   useEffect(() => {
     setIsComponentMounted(true);
