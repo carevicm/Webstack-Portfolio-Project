@@ -9,16 +9,24 @@ function ClientSideComponent({ project }) {
   const router = useRouter();
 
   const handleBackNavigation = () => {
+    window.location.href = "/#projects";
     setTimeout(() => {
       const projectsSection = document.getElementById("projects");
       if (projectsSection) {
         projectsSection.scrollIntoView({ behavior: "smooth" });
-        router.replace("/#projects", undefined, { shallow: true });
-      } else {
-        window.location.href = "/#projects";
       }
-    }, 1000);
+    }, 100);
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const section = document.querySelector(hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
 
   useEffect(() => {
     setIsComponentMounted(true);
