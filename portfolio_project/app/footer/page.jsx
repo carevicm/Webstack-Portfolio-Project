@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white mt-auto">
+    <footer className="footer border z-10 border-t-transparent border-l-transparent border-r-transparent text-white mt-auto">
       <div className="container mx-auto p-4 flex justify-between items-center">
         <div className="logo" style={logoStyle}>
           <Logo />
