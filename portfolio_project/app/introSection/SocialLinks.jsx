@@ -43,7 +43,7 @@ const SocialLinks = () => {
       </div>
       <Link
         className="w-32 sm:w-auto px-1 py-1 mb-2 rounded-full bg-gradient-to-br from-[#6d28d9] to-[#d946ef] hover:bg-[#1e293b] text-white whitespace-nowrap"
-        href="https://drive.google.com/file/d/1Gplv4VUP5pHYp3JV5fCmnynGitjWovt2/view?usp=sharing"
+        href="https://drive.google.com/file/d/16fyOoB1GWzzrKeoU9kQJ_mFInOhCHmRo/view?usp=sharing"
         passHref
         target="_blank"
         rel="noopener noreferrer"
