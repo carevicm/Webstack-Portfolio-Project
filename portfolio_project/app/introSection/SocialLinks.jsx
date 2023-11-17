@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import SocialLink from "./SocialLink";
 import useIcons from "./useIcons";
 
@@ -42,7 +41,7 @@ const SocialLinks = () => {
           />
         ))}
       </div>
-      <Link
+      <a
         className="w-32 sm:w-auto px-1 py-1 mb-2 rounded-full bg-gradient-to-br from-[#6d28d9] to-[#d946ef] hover:bg-[#1e293b] text-white whitespace-nowrap"
         href={pdfUrl}
         passHref
@@ -53,7 +52,7 @@ const SocialLinks = () => {
         <span className="block bg-[#121212] hover:bg-[#1e293b] rounded-full px-5 py-3 text-xs sm:px-5 sm:py-3 sm:text-base">
           My Resume
         </span>
-      </Link>
+      </a>
     </div>
   );
 };
