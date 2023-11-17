@@ -6,6 +6,7 @@ import useIcons from "./useIcons";
 
 const SocialLinks = () => {
   const { icons, loading } = useIcons();
+  const pdfUrl = "/pdfs/Milan-Carevic - Resume.pdf";
 
   const socials = [
     {
@@ -43,7 +44,7 @@ const SocialLinks = () => {
       </div>
       <Link
         className="w-32 sm:w-auto px-1 py-1 mb-2 rounded-full bg-gradient-to-br from-[#6d28d9] to-[#d946ef] hover:bg-[#1e293b] text-white whitespace-nowrap"
-        href="https://drive.google.com/file/d/16fyOoB1GWzzrKeoU9kQJ_mFInOhCHmRo/view?usp=sharing"
+        href={pdfUrl}
         passHref
         target="_blank"
         rel="noopener noreferrer"
