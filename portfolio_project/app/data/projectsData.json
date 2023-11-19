@@ -149,7 +149,7 @@
       "Password Strength Indicator: Provides real-time feedback on password strength, guiding users to set secure passwords.",
       "Data Validation: Utilizes the power of Yup for comprehensive and custom validation on both client and server sides.",
       "Regex Action Utility: An extra layer of password validation ensuring complexity and security.",
-      "The project architecture emphasizes modularity, clarity, and maintainability while prioritizing scalability, guaranteeing enduring adaptability and operational efficiency."
+      "The project architecture emphasizes: modularity, clarity, and maintainability while prioritizing scalability, guaranteeing enduring adaptability and operational efficiency."
     ]
   },
   {
@@ -373,29 +373,33 @@
   },
   {
     "id": 12,
-    "title": "Personal Website",
-    "description": "",
-    "image": "/images/projects/personal_website.webp",
+    "title": "JSON-API",
+    "description": "Dynamic Recipe Web Application",
+    "image": "/images/projects/taco_project.webp",
     "tag": ["All", "Web"],
-    "gitUrl": "https://github.com/carevicm/Personal-Website",
-    "previewUrl": "https://carevicm.github.io/Personal-Website/",
-    "skills": "HTML, CSS and Bootstrap",
-    "text": "Welcome to a simple personal website example. Pixels meet passion here, and code comes to life. From intricate designs to fluid user interactions, every aspect of this site demonstrates a dedication to digital excellence. Explore my abilities, embark on a journey, and meet the coder behind the creations.",
+    "gitUrl": "https://github.com/carevicm/JSON.API",
+    "previewUrl": "https://json-api-cmop.onrender.com/",
+    "skills": "Node.js Express.js Rest API JSON",
+    "text": "Taco Town is a delightful and straightforward web application that combines various technologies to deliver a seamless and interactive user experience. From the client-side interactivity to the server-side data handling, each technology plays a crucial role in creating an efficient and dynamic web application. This project serves as an excellent example of modern web development practices.",
     "techskills": [
-      "HTML5 & CSS3",
-      "Bootstrap 5",
-      "User-Centric Design",
-      "Seamless Web Development",
-      "Digital Storytelling",
-      "Responsive Design"
+      "Node.js",
+      "Express.js",
+      "Body-Parser",
+      "EJS",
+      "Rest API",
+      "JSON",
+      "JavaScript",
+      "HTML",
+      "CSS"
     ],
     "features": [
-      "Engaging UI: A blend of aesthetics and functionality, ensuring every visitor's engagement.",
-      "Mobile-Optimized: Crafted for screens of all sizes, ensuring a seamless experience everywhere.",
-      "Visual Narratives: Iconography and imagery that tell a story, enhancing the site's narrative.",
-      "Social Connect: One-click access to Milan's professional networks like LinkedIn, GitHub, and Instagram.",
-      "Swift Interactions: Efficient coding ensures every click, scroll, and hover is responsive and smooth.",
-      "Personal Touch: A dedicated contact section, inviting collaborations, queries, and connections."
+      "HTML & CSS: The front end of the application is built using HTML5 and CSS3. HTML structures the content, while CSS is used for styling. The application features a responsive design with a focus on usability and aesthetics. The CSS includes custom styles for buttons, text, and layout, along with a unique background pattern created using SVG.",
+      "JavaScript (Client-Side): Although not explicitly shown in the provided code, JavaScript may be used for handling user interactions in the browser, such as responding to button clicks.",
+      "Node.js & Express.js: The backend of the application is powered by Node.js, with Express.js as the web application framework. Express.js simplifies the server-side logic, handling HTTP requests and responses with ease.",
+      "EJS (Embedded JavaScript Templating): EJS is used as a templating engine to dynamically generate HTML pages based on the server-side data. It allows the insertion of JavaScript code into HTML, enabling dynamic content rendering.",
+      "Body-Parser: This middleware is used in the Express.js application for parsing incoming request bodies. It's essential for handling POST requests, as it allows access to req.body.",
+      "JSON: The recipes are stored in a JSON format, which is a lightweight data-interchange format. This makes it easy to store and retrieve recipe data, including details like ingredients, preparation methods, and prices.",
+      "Application Logic: The server delivers HTML, CSS, and EJS templates, enabling users to select taco types on the main page. Upon selection, a POST request is processed, fetching the recipe from JSON data. The homepage then dynamically displays the recipe with detailed ingredients and preparation steps, complemented by responsive and aesthetically pleasing CSS styling."
     ]
   },
   {
@@ -471,23 +475,29 @@
   },
   {
     "id": 17,
-    "title": "Online Resume",
-    "description": "My Resume",
-    "image": "/images/projects/resume.webp",
+    "title": "Personal Website",
+    "description": "",
+    "image": "/images/projects/personal_website.webp",
     "tag": ["All", "Web"],
-    "gitUrl": "https://github.com/carevicm/Milan-Carevic-Resume",
-    "previewUrl": "https://carevicm.github.io/Milan-Carevic-Resume/",
-    "skills": "HTML CSS",
-    "text": "Milan Carevic's digital resume showcases his extensive experience as a Full-Stack Software Developer with a strong background in designing, developing, and supporting cloud-native enterprise and consumer solutions. The resume highlights key strengths, work experience, educational background, certifications, and special skills.",
-    "techskills": ["HTML5", "CSS3", "Responsive Design"],
+    "gitUrl": "https://github.com/carevicm/Personal-Website",
+    "previewUrl": "https://carevicm.github.io/Personal-Website/",
+    "skills": "HTML, CSS and Bootstrap",
+    "text": "Welcome to a simple personal website example. Pixels meet passion here, and code comes to life. From intricate designs to fluid user interactions, every aspect of this site demonstrates a dedication to digital excellence. Explore my abilities, embark on a journey, and meet the coder behind the creations.",
+    "techskills": [
+      "HTML5 & CSS3",
+      "Bootstrap 5",
+      "User-Centric Design",
+      "Seamless Web Development",
+      "Digital Storytelling",
+      "Responsive Design"
+    ],
     "features": [
-      "Professional Header: A dedicated header section with personal details, contact information, and links to LinkedIn and GitHub profiles.",
-      "Key Strengths Section: A concise list of professional strengths, emphasizing proficiency in full-stack development and cloud services.",
-      "Work Experience: Detailed breakdown of professional journey, highlighting roles, responsibilities, and achievements.",
-      "Educational Background: A comprehensive list of educational qualifications from renowned institutions.",
-      "Certifications: A section dedicated to showcasing certifications in data analysis and AI.",
-      "Special Skills: A detailed list of technical and soft skills, emphasizing expertise in frontend and backend technologies, database management, mobile app development, and more.",
-      "Footer: A simple footer with copyright information."
+      "Engaging UI: A blend of aesthetics and functionality, ensuring every visitor's engagement.",
+      "Mobile-Optimized: Crafted for screens of all sizes, ensuring a seamless experience everywhere.",
+      "Visual Narratives: Iconography and imagery that tell a story, enhancing the site's narrative.",
+      "Social Connect: One-click access to Milan's professional networks like LinkedIn, GitHub, and Instagram.",
+      "Swift Interactions: Efficient coding ensures every click, scroll, and hover is responsive and smooth.",
+      "Personal Touch: A dedicated contact section, inviting collaborations, queries, and connections."
     ]
   },
   {
@@ -515,7 +525,7 @@
     "image": "/images/projects/collage.webp",
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/Node.js_Express.js-Secret_Page/tree/main",
-    "previewUrl": "/",
+    "previewUrl": "https://secret-page.onrender.com/",
     "skills": "Middleware Integration User Authentication Server Management",
     "text": "The Secrets Web Application is designed to simulate a password-protected portal where users can access a curated list of secrets. The primary goal of this project is to demonstrate the integration of user authentication mechanisms in web applications. The application is built using Express.js and features a minimalist yet functional user interface. Enter the password ILoveProgramming to access the secrets!",
     "techskills": [
@@ -544,7 +554,7 @@
     "image": "/images/projects/bandname.webp",
     "tag": ["All", "Web"],
     "gitUrl": "https://github.com/carevicm/Node.js_Express.js-Band_Name_Generator",
-    "previewUrl": "/",
+    "previewUrl": "https://band-name-generator-oev4.onrender.com/",
     "skills": "Node.js Express.js Middleware Integration",
     "text": "This application is designed to provide users with a unique band name based on their input. By combining the name of a street and a pet, we generate a band name that's both fun and memorable.",
     "techskills": [
@@ -564,16 +574,24 @@
   },
   {
     "id": 21,
-    "title": "Coming soon",
-    "description": "Angular Project",
-    "image": "/images/projects/angular.webp",
-    "tag": ["All", "Web", "Future"],
-    "gitUrl": "/",
-    "previewUrl": "/",
-    "skills": "Future",
-    "text": "Future",
-    "techskills": ["List unavailable"],
-    "features": ["Future: Stay tuned!"]
+    "title": "Online Resume",
+    "description": "My Resume",
+    "image": "/images/projects/resume.webp",
+    "tag": ["All", "Web"],
+    "gitUrl": "https://github.com/carevicm/Milan-Carevic-Resume",
+    "previewUrl": "https://carevicm.github.io/Milan-Carevic-Resume/",
+    "skills": "HTML CSS",
+    "text": "Milan Carevic's digital resume showcases his extensive experience as a Full-Stack Software Developer with a strong background in designing, developing, and supporting cloud-native enterprise and consumer solutions. The resume highlights key strengths, work experience, educational background, certifications, and special skills.",
+    "techskills": ["HTML5", "CSS3", "Responsive Design"],
+    "features": [
+      "Professional Header: A dedicated header section with personal details, contact information, and links to LinkedIn and GitHub profiles.",
+      "Key Strengths Section: A concise list of professional strengths, emphasizing proficiency in full-stack development and cloud services.",
+      "Work Experience: Detailed breakdown of professional journey, highlighting roles, responsibilities, and achievements.",
+      "Educational Background: A comprehensive list of educational qualifications from renowned institutions.",
+      "Certifications: A section dedicated to showcasing certifications in data analysis and AI.",
+      "Special Skills: A detailed list of technical and soft skills, emphasizing expertise in frontend and backend technologies, database management, mobile app development, and more.",
+      "Footer: A simple footer with copyright information."
+    ]
   },
   {
     "id": 22,
@@ -590,7 +608,7 @@
   },
   {
     "id": 23,
-    "title": "Future",
+    "title": "Coming soon",
     "description": "Vue.js Project",
     "image": "/images/projects/vue.webp",
     "tag": ["All", "Web", "Future"],
@@ -645,6 +663,19 @@
     "title": "Coming soon",
     "description": "Vite.js Project",
     "image": "/images/projects/vite.webp",
+    "tag": ["All", "Web", "Future"],
+    "gitUrl": "/",
+    "previewUrl": "/",
+    "skills": "Future",
+    "text": "Future",
+    "techskills": ["List unavailable"],
+    "features": ["Future: Stay tuned!"]
+  },
+  {
+    "id": 28,
+    "title": "Coming soon",
+    "description": "Angular Project",
+    "image": "/images/projects/angular.webp",
     "tag": ["All", "Web", "Future"],
     "gitUrl": "/",
     "previewUrl": "/",
