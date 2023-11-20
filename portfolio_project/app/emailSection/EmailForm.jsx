@@ -60,6 +60,7 @@ const EmailForm = () => {
             id="email"
             type="email"
             name="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -80,6 +81,7 @@ const EmailForm = () => {
             type="text"
             name="subject"
             value={subject}
+            autoComplete="on"
             onChange={(e) => setSubject(e.target.value)}
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#f3f4f6] text-sm rounded-lg block w-full p-2.5"
@@ -97,6 +99,7 @@ const EmailForm = () => {
             id="message"
             name="message"
             value={message}
+            autoComplete="on"
             onChange={(e) => setMessage(e.target.value)}
             required
             className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#f3f4f6] text-sm rounded-lg block resize-none w-full h-64 p-2.5"

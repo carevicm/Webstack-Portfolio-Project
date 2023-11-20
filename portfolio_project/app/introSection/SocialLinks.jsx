@@ -44,7 +44,7 @@ const SocialLinks = () => {
       <a
         className="w-32 sm:w-auto px-1 py-1 mb-2 rounded-full bg-gradient-to-br from-[#6d28d9] to-[#d946ef] hover:bg-[#1e293b] text-white whitespace-nowrap"
         href={pdfUrl}
-        passHref
+        passhref="true"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="My Resume - Download Milan Online Resume"

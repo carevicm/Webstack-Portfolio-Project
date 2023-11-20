@@ -404,21 +404,39 @@
   },
   {
     "id": 13,
-    "title": "CSS Projects",
-    "description": "Showcase of CSS Projects",
-    "image": "/images/projects/css_projects.webp",
+    "title": "Server Side API Request",
+    "description": "Web app with personalized activity suggestions",
+    "image": "/images/projects/axios_request.webp",
     "tag": ["All", "Web"],
-    "gitUrl": "https://github.com/carevicm/CSS-Projects",
-    "previewUrl": "https://carevicm.github.io/CSS-Projects/",
-    "skills": "CSS3 HTML5",
-    "text": " Dive into a trio of projects that encapsulate Milan Carevic's journey in the world of CSS. Each project, be it the vibrant flag of Laos, a quirky meme, or a responsive design agency, showcases a different skill set, all bound together by the common thread of impeccable CSS craftsmanship.",
-    "techskills": ["CSS3", "HTML5", "Responsive Design with @media queries"],
-    "features": [
-      "Flag Project: A vivid representation of the Laotian flag, crafted purely using CSS. The design captures the essence of the flag with its distinct colors and central white circle, symbolizing the unity of the Laotian people. Features include CSS positioning, layering, and color manipulation.",
-      "Meme Project: A light-hearted meme that humorously celebrates the triumphs of mastering CSS. The meme combines imagery with text to convey the joy of achieving a 'purr-fect' website design. Features include CSS styling, font integration, and image bordering.",
-      "Web Design Agency Project: A mockup of a design agency's website, showcasing services in beauty and construction. The project stands out for its responsive design, ensuring a seamless user experience across devices. Features include responsive design using @media queries, CSS floats, and modern typography."
-    ]
-  },
+    "gitUrl": "https://github.com/carevicm/Server_Side_API_Request",
+    "previewUrl": "https://server-side-api-request.onrender.com/",
+    "skills": "Full Stack Development, API Integration, Error Handling",
+  "text": "I'm Bored is an interactive web application designed to suggest activities to users based on their preferences. It features a clean, user-friendly interface built with HTML, CSS, and JavaScript. The backend, developed using Node.js and Express.js, interacts with the Bored API to fetch a variety of activities. Users can select the type of activity and the number of participants, and the app will provide a suitable suggestion. The application is designed to be responsive, ensuring a smooth experience across different devices and screen sizes. It also includes robust error handling for scenarios where no activities match the user's criteria.",
+  "techskills": [
+    "HTML",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "Axios",
+    "Responsive Web Design",
+    "CSS Media Queries",
+    "API Integration",
+    "EJS Templating",
+    "Error Handling",
+    "Form Handling",
+    "Data Validation",
+    "Git"
+  ],
+  "features": [
+    "Dynamic Activity Suggestions: Offers a variety of activities based on user preferences.",
+    "Customizable Options: Allows users to select activity types and participant numbers.",
+    "Responsive Design: Ensures a seamless experience on both desktop and mobile devices.",
+    "Error Handling: Gracefully manages scenarios with no matching activities.",
+    "Interactive User Interface: Provides an engaging and easy-to-navigate interface.",
+    "API Integration: Fetches real-time data from the Bored API for up-to-date suggestions.",
+    "Robust Backend: Built with Node.js and Express.js for efficient server-side processing."
+  ]
+},
   {
     "id": 14,
     "title": "HTML Portfolio",
@@ -520,6 +538,23 @@
   },
   {
     "id": 19,
+    "title": "CSS Projects",
+    "description": "Showcase of CSS Projects",
+    "image": "/images/projects/css_projects.webp",
+    "tag": ["All", "Web"],
+    "gitUrl": "https://github.com/carevicm/CSS-Projects",
+    "previewUrl": "https://carevicm.github.io/CSS-Projects/",
+    "skills": "CSS3 HTML5",
+    "text": " Dive into a trio of projects that encapsulate Milan Carevic's journey in the world of CSS. Each project, be it the vibrant flag of Laos, a quirky meme, or a responsive design agency, showcases a different skill set, all bound together by the common thread of impeccable CSS craftsmanship.",
+    "techskills": ["CSS3", "HTML5", "Responsive Design with @media queries"],
+    "features": [
+      "Flag Project: A vivid representation of the Laotian flag, crafted purely using CSS. The design captures the essence of the flag with its distinct colors and central white circle, symbolizing the unity of the Laotian people. Features include CSS positioning, layering, and color manipulation.",
+      "Meme Project: A light-hearted meme that humorously celebrates the triumphs of mastering CSS. The meme combines imagery with text to convey the joy of achieving a 'purr-fect' website design. Features include CSS styling, font integration, and image bordering.",
+      "Web Design Agency Project: A mockup of a design agency's website, showcasing services in beauty and construction. The project stands out for its responsive design, ensuring a seamless user experience across devices. Features include responsive design using @media queries, CSS floats, and modern typography."
+    ]
+  },
+  {
+    "id": 20,
     "title": "Secrets Web Application",
     "description": "Password protection using Node and Express middleware",
     "image": "/images/projects/collage.webp",
@@ -548,7 +583,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "title": "Node.js and Express.js",
     "description": "Band Name Generator",
     "image": "/images/projects/bandname.webp",
@@ -573,7 +608,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "Online Resume",
     "description": "My Resume",
     "image": "/images/projects/resume.webp",
@@ -594,7 +629,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "Coming soon",
     "description": "MEAN Stack Project",
     "image": "/images/projects/MEAN_Stack.webp",
@@ -607,7 +642,7 @@
     "features": ["Future: Stay tuned!"]
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "Coming soon",
     "description": "Vue.js Project",
     "image": "/images/projects/vue.webp",
@@ -620,7 +655,7 @@
     "features": ["Future: Stay tuned!"]
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "Coming soon",
     "description": "Python Project",
     "image": "/images/projects/PythonProject.webp",
@@ -633,7 +668,7 @@
     "features": ["Future: Stay tuned!"]
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "Coming soon",
     "description": "Mobile App with React Native",
     "image": "/images/projects/react_native.webp",
@@ -646,7 +681,7 @@
     "features": ["Future: Stay tuned!"]
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "Coming soon",
     "description": "MERN App with React Native",
     "image": "/images/projects/mern.webp",
@@ -659,7 +694,7 @@
     "features": ["Future: Stay tuned!"]
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "Coming soon",
     "description": "Vite.js Project",
     "image": "/images/projects/vite.webp",
@@ -672,7 +707,7 @@
     "features": ["Future: Stay tuned!"]
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "Coming soon",
     "description": "Angular Project",
     "image": "/images/projects/angular.webp",
