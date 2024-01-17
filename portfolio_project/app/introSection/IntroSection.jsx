@@ -39,7 +39,7 @@ const IntroSection = () => {
         </motion.div>
       </h1>
       <p className="min-h-[24px] sm:min-h-[28px] lg:min-h-[32px] text-[#ADB7BE] justify-center items-center text-xs sm:text-base mb-2 lg:text-xl">
-        LET&apos;S BUILD FUTURES TOGETHER
+        LET&apos;S BUILD FUTURE TOGETHER
       </p>
     </div>
   );

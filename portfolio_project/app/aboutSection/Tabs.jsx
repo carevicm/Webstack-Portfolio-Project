@@ -10,10 +10,10 @@ const TAB_DATA = {
     title: "Education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Centennial College, Toronto, ON</li>
+       {/* <li>Centennial College, Toronto, ON</li>
         <li className="list-none">
           Advanced Diploma in Software Engineering Technology - AI
-        </li>
+    </li> */}
         <li>Arbutus College, Vancouver, BC</li>
         <li className="list-none">
           College Diploma in Computer Science and Frontend Web Development
